@@ -84,7 +84,7 @@ export const projects: Project[] = [
         id: 'SOUEAST',
         title: 'SOUEAST CHILE',
         image: {
-            src: '/assets/soueastchile.png',
+            src: '/assets/soueast-chile.png',
             alt: 'Página de marca en Chile para exponer vehículos, generar SEO y canal de cotización/contacto.',
             width: 1071,
             height: 531,
@@ -95,12 +95,34 @@ export const projects: Project[] = [
         id: 'casaroyal',
         title: 'Casa Royal',
         image: {
-            src: '/assets/casaroyal.png',
+            src: '/assets/casa-royal.png',
             alt: 'Tienda desarrollada en Adobe Commerce Cloud',
             width: 1071,
             height: 531,
         },
         platform: 'Adobe Commerce Cloud',
+        role: 'Frontend developer'
+    },{
+        id: 'MiSERMIG',
+        title: 'MiSERMIG',
+        image: {
+            src: '/assets/MiSERMIG.png',
+            alt: 'Plataforma para gestión de migrantes en Chile.',
+            width: 1071,
+            height: 531,
+        },
+        platform: 'Liferay',
+        role: 'Frontend developer'
+    },{
+        id: 'Tienda LEGO',
+        title: 'Tienda LEGO',
+        image: {
+            src: '/assets/tienda-lego.png',
+            alt: 'E-Commerce.',
+            width: 1071,
+            height: 531,
+        },
+        platform: 'Magento 2',
         role: 'Frontend developer'
     }
 ];
