@@ -1,0 +1,18 @@
+.project {position:relative;max-width:1228px;padding-left:157px;margin-top:40px}
+.project-image {display:block;width:100%;height:auto;border-radius:8px}
+.project figcaption {position:absolute;left:0;top:37px;border-radius:8px;width:289px;padding:16px;font-size:14px;line-height:.883}
+.project h3 {text-align:center;font-size:20px;margin-bottom:16px}
+.project figcaption p+p {margin-top:12px}
+
+@media(max-width:1100px){.project {padding-left:0;margin-top:156px;padding-bottom:63px}
+.project figcaption {top:auto;bottom:0;left:50%;translate:-50% 0}
+}
+
+@media(max-width:600px){.project {margin-top:45px}
+.project figcaption {width:250px}
+}
+
+
+/* Swiper controls transform; mobile centering uses independent translate. */
+@media (prefers-reduced-motion: reduce) {.project .parallax-caption { transform: none !important; transition: none !important; }
+}

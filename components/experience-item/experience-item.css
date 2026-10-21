@@ -1,0 +1,15 @@
+.experience-item {display:flex;gap:80px;min-height:232px}
+.timeline-mark {width:28px;flex-shrink:0;padding-top:14px}
+.timeline-mark>img {display:block}
+.timeline-line {position:relative;margin-top:24px;width:28px;height:156px;display:flex;align-items:center;justify-content:center}
+.timeline-line img {transform:rotate(90deg);max-width:none}
+.company {font-weight:400;color:var(--gray);font-size:16px;margin-top:16px}
+.roles {font-weight:700;font-size:16px;line-height:.883;margin-top:16px}
+.roles span {display:block}
+
+@media(max-width:1100px){.experience-item {gap:17px}
+}
+
+@media(max-width:600px){.experience-item {min-height:225px}
+.roles {line-height:1.2;font-size:14px}
+}

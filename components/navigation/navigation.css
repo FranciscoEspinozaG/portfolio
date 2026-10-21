@@ -1,0 +1,17 @@
+.navigation {position:fixed;z-index:20;left:32px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:14px;font-size:16px;line-height:.883}
+.navigation a {text-decoration:none}
+.navigation .active {color:var(--yellow);font-weight:900}
+.navigation a:hover {color:var(--yellow)}
+.menu-toggle, .menu-backdrop {display:none}
+.skip-link {position:fixed;left:20px;top:-100px;z-index:100;background:white;padding:15px}
+.skip-link:focus {top:20px}
+
+@media(max-width:1100px){.navigation {display:none;transform:none;top:0;left:auto;right:0;width:80%;height:100dvh;background:#171717;color:white;justify-content:flex-start;padding:130px 32px 40px;gap:24px;font-size:clamp(25px,5vw,48px);line-height:1.1;text-align:right}
+.navigation.open {display:flex}
+.menu-toggle {display:flex;position:fixed;right:24px;top:20px;z-index:30;border:0;background:transparent;width:45px;height:34px;padding:0;flex-direction:column;justify-content:space-between}
+.menu-toggle span {width:37px;height:4px;background:var(--yellow);transition:transform .2s}
+.menu-toggle.is-open span:nth-child(1) {transform:translateY(15px) rotate(45deg)}
+.menu-toggle.is-open span:nth-child(2) {opacity:0}
+.menu-toggle.is-open span:nth-child(3) {transform:translateY(-15px) rotate(-45deg)}
+.menu-backdrop {display:block;position:fixed;inset:0;background:#0006;border:0;z-index:19}
+}

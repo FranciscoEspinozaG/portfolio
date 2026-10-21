@@ -1,0 +1,8 @@
+footer {height:160px;background:var(--ink)}
+
+@media(max-width:600px){footer {height:100px}
+}
+footer {
+  scroll-snap-align: end;
+  scroll-snap-stop: always;
+}
