@@ -1,7 +1,7 @@
-@font-face{font-family:Clarity;src:url('/assets/ClarityCity-Thin.woff2') format('woff2');font-weight:100;font-display:swap}
-@font-face{font-family:Clarity;src:url('/assets/ClarityCity-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
-@font-face{font-family:Clarity;src:url('/assets/ClarityCity-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
-@font-face{font-family:Clarity;src:url('/assets/ClarityCity-Black.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:Clarity;src:url('../public/assets/ClarityCity-Thin.woff2') format('woff2');font-weight:100;font-display:swap}
+@font-face{font-family:Clarity;src:url('../public/assets/ClarityCity-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Clarity;src:url('../public/assets/ClarityCity-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:Clarity;src:url('../public/assets/ClarityCity-Black.woff2') format('woff2');font-weight:900;font-display:swap}
 :root {--ink:#171717;--yellow:#ffae00;--gray:#818181;--section:#f6f6f6}
 * {box-sizing:border-box}
 html {scroll-behavior:smooth}

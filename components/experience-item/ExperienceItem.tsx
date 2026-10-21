@@ -1,3 +1,4 @@
+import { assetPath } from '../../lib/asset-path';
 
 import './experience-item.css';
 export interface ExperienceItemProps {
@@ -10,8 +11,8 @@ export default function ExperienceItem({ years, company, roles }: ExperienceItem
   return (
     <li className="experience-item">
       <div className="timeline-mark" aria-hidden="true">
-        <img src="/assets/dot.svg" alt="" />
-        <div className="timeline-line"><img src="/assets/line.svg" alt="" /></div>
+        <img src={assetPath("/assets/dot.svg")} alt="" />
+        <div className="timeline-line"><img src={assetPath("/assets/line.svg")} alt="" /></div>
       </div>
       <div>
         <h3>{years}</h3>

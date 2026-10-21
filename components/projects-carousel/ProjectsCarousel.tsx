@@ -1,5 +1,8 @@
 'use client';
 
+import { assetPath } from '../../lib/asset-path';
+
+
 import './projects-carousel.css';
 import { useId, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -26,7 +29,7 @@ export default function ProjectsCarousel({ projects }: {
           </SwiperSlide>))}
       </Swiper>
       <div className="project-controls">
-        <img src="/assets/arrows.svg" alt=""/>
+        <img src={assetPath("/assets/arrows.svg")} alt=""/>
         <button type="button" aria-label="Proyecto anterior" aria-controls={id} disabled={position.beginning} onClick={() => swiper.current?.slidePrev()}/>
         <button type="button" aria-label="Proyecto siguiente" aria-controls={id} disabled={position.end} onClick={() => swiper.current?.slideNext()}/>
       </div>

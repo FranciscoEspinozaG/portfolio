@@ -17,7 +17,7 @@ Open http://localhost:3000. Contact destinations are configured in `.env.local`;
 ```sh
 npm run build
 npm run typecheck
-npm start
+npx serve out
 ```
 
 Uses the original Figma portrait, SENTUA image, timeline SVGs, and project arrows, all stored locally. Clarity City fonts are distributed with their license in `public/assets/FONT-LICENSE.txt`.
@@ -45,3 +45,15 @@ Each reusable component owns a folder and its styles:
 - `components/footer/` — page footer.
 
 Section composition lives in individual folders under `components/sections/`. Shared foundations, glass styling, and page scroll snapping remain in `app/globals.css`.
+
+## GitHub Pages
+
+The workflow in `.github/workflows/deploy-pages.yml` builds and deploys on pushes to `main`, or manually from the Actions tab.
+
+1. Open repository **Settings → Pages** and set **Source** to **GitHub Actions**.
+2. Push these changes to `main`.
+3. Wait for the deployment workflow to finish. The site will be at https://franciscoespinozag.github.io/portfolio/.
+
+The workflow reads the base path from GitHub Pages configuration, so repository paths and custom domains are supported. Contact links use the supplied defaults; override them with repository Actions variables `NEXT_PUBLIC_LINKEDIN_URL` and `NEXT_PUBLIC_CONTACT_EMAIL`.
+
+`npm run build` exports the static site to `out/`. To reproduce the repository deployment locally, run `NEXT_PUBLIC_BASE_PATH=/portfolio npm run build` and serve `out/` at `/portfolio/`. Local development defaults to `/`. `next start` is not supported for static exports.
