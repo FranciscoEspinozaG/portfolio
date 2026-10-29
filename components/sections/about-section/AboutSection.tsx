@@ -1,9 +1,12 @@
+'use client';
+import { useLanguage } from '../../LanguageProvider';
 import { about, stats } from '../../../data/portfolio';
 import HighlightItem from '../../highlight-item/HighlightItem';
 export default function AboutSection() {
-    return <section tabIndex={0} aria-label="Acerca de mí" id="acerca" className="muted about">
+  const { t } = useLanguage();
+    return <section tabIndex={0} aria-label={t("Acerca de mí")} id="acerca" className="muted about">
         <div className="content">
-            <h2>Acerca de mí</h2>
+            <h2>{t("Acerca de mí")}</h2>
             <div className="stats">
                 {stats.map(stat => (
                     <HighlightItem key={stat.id} {...stat} />
@@ -11,7 +14,7 @@ export default function AboutSection() {
             </div>
             <div className="copy about-copy">
                 {about.map(p => 
-                    <p key={p}>{p}</p>
+                    <p key={p}>{t(p)}</p>
                 )}
             </div>
         </div>

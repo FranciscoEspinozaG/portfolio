@@ -15,3 +15,9 @@
 .menu-toggle.is-open span:nth-child(3) {transform:translateY(-15px) rotate(-45deg)}
 .menu-backdrop {display:block;position:fixed;inset:0;background:#0006;border:0;z-index:19}
 }
+
+.language-switch {position:fixed;top:22px;left:32px;z-index:31;display:flex;align-items:center;gap:8px;background:#171717;color:#fff;padding:8px 12px;border-radius:6px;font-size:14px}
+.language-switch button {font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:4px}
+.language-switch button[aria-pressed="true"] {color:var(--yellow);font-weight:900}
+.language-switch button:focus-visible {outline:2px solid var(--yellow);outline-offset:3px}
+@media(max-width:1100px){.language-switch {left:24px;top:16px}}

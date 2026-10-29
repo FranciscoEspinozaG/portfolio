@@ -1,3 +1,5 @@
+'use client';
+import { useLanguage } from '../LanguageProvider';
 import { assetPath } from '../../lib/asset-path';
 
 import './experience-item.css';
@@ -8,6 +10,7 @@ export interface ExperienceItemProps {
 }
 
 export default function ExperienceItem({ years, company, roles }: ExperienceItemProps) {
+  const { t } = useLanguage();
   return (
     <li className="experience-item">
       <div className="timeline-mark" aria-hidden="true">
@@ -17,7 +20,7 @@ export default function ExperienceItem({ years, company, roles }: ExperienceItem
       <div>
         <h3>{years}</h3>
         <p className="company">{company}</p>
-        <p className="roles">{roles.map(role => <span key={role}>{role}</span>)}</p>
+        <p className="roles">{roles.map(role => <span key={role}>{t(role)}</span>)}</p>
       </div>
     </li>
   );

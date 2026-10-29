@@ -1,11 +1,12 @@
 'use client';
-
+import { useLanguage } from '../LanguageProvider';
 import './navigation.css';
 
 import { useEffect, useState } from 'react';
 import { sections } from '../../data/portfolio';
 
 export default function Navigation() {
+  const { t, language, setLanguage } = useLanguage();
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('');
 
@@ -34,18 +35,23 @@ export default function Navigation() {
 
   return (
     <>
-      <a className="skip-link" href="#acerca">Saltar al contenido</a>
+      <div className="language-switch" role="group" aria-label={language === 'en' ? 'Language' : 'Idioma'}>
+        <button type="button" lang="es" aria-label="Español" aria-pressed={language === 'es'} onClick={() => setLanguage('es')}>ES</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" lang="en" aria-label="English" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>EN</button>
+      </div>
+      <a className="skip-link" href="#acerca">{t("Saltar al contenido")}</a>
       <button className={`menu-toggle ${open ? 'is-open' : ''}`}
-        aria-label={open ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={open}
+        aria-label={open ? t('Cerrar menú') : t('Abrir menú')} aria-expanded={open}
         aria-controls="navigation" onClick={() => setOpen(!open)}>
         <span /><span /><span />
       </button>
-      {open && <button className="menu-backdrop" aria-label="Cerrar menú" onClick={() => setOpen(false)} />}
-      <nav id="navigation" aria-label="Navegación principal" className={open ? 'navigation open' : 'navigation'}>
+      {open && <button className="menu-backdrop" aria-label={t("Cerrar menú")} onClick={() => setOpen(false)} />}
+      <nav id="navigation" aria-label={t("Navegación principal")} className={open ? 'navigation open' : 'navigation'}>
         {sections.map(({ id, label }) => (
           <a key={id} href={`#${id}`} className={active === id ? 'active' : ''}
             aria-current={active === id ? 'location' : undefined} onClick={() => setOpen(false)}>
-            {label}
+            {t(label)}
           </a>
         ))}
       </nav>

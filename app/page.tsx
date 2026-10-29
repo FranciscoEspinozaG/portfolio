@@ -1,3 +1,4 @@
+import { LanguageProvider } from '../components/LanguageProvider';
 import Footer from '../components/footer/Footer';
 import Navigation from '../components/navigation/Navigation';
 import HeroSection from '../components/sections/hero-section/HeroSection';
@@ -9,7 +10,7 @@ import ContactSection from '../components/sections/contact-section/ContactSectio
 
 export default function Portfolio() {
   return (
-    <>
+    <LanguageProvider>
       <Navigation />
       <main>
         <HeroSection />
@@ -20,6 +21,6 @@ export default function Portfolio() {
         <ContactSection />
       </main>
       <Footer />
-    </>
+    </LanguageProvider>
   );
 }

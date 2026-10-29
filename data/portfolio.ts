@@ -1,4 +1,14 @@
-export const about = ['Hola, soy Francisco.', 'Desarrollador Web | Full Stack & Tech Lead', 'Soy desarrollador web con más de 9 años de experiencia creando soluciones digitales, combinando mi formación como Diseñador Gráfico con el desarrollo de software y el liderazgo técnico.', 'A lo largo de mi carrera he trabajado en plataformas empresariales, comercio electrónico, integraciones de servicios y desarrollo de aplicaciones web, utilizando tecnologías como JavaScript, TypeScript, PHP, React, Angular, Vue, Magento y Liferay.', 'Mi experiencia se ha concentrado principalmente en el frontend, pero mi interés por comprender y construir soluciones completas me ha llevado a profundizar en el desarrollo backend, la arquitectura de software y las integraciones.', 'Actualmente curso Ingeniería en Informática en la Universidad Central de Chile, complementando mi experiencia profesional con nuevos conocimientos y fortaleciendo mi perfil Full Stack.', 'Me apasiona resolver problemas, aprender nuevas tecnologías y transformar ideas en soluciones funcionales, escalables y bien diseñadas.'];
+import type { HighlightItemBase } from '../interfaces/HighlightItemBase';
+import type { Project } from '../interfaces/Project';
+
+export const about = [
+    'Hola, soy Francisco.',
+    'Desarrollador Web | Full Stack & Tech Lead',
+    'Soy desarrollador web con más de 9 años de experiencia creando soluciones digitales, combinando mi formación como Diseñador Gráfico con el desarrollo de software y el liderazgo técnico.',
+    'A lo largo de mi carrera he trabajado en plataformas empresariales, comercio electrónico, integraciones de servicios y desarrollo de aplicaciones web, utilizando tecnologías como JavaScript, TypeScript, PHP, React, Angular, Vue, Magento y Liferay.',
+    'Mi experiencia se ha concentrado principalmente en el frontend, pero mi interés por comprender y construir soluciones completas me ha llevado a profundizar en el desarrollo backend, la arquitectura de software y las integraciones.',
+    'Actualmente curso Ingeniería en Informática en la Universidad Central de Chile, complementando mi experiencia profesional con nuevos conocimientos y fortaleciendo mi perfil Full Stack.',
+    'Me apasiona resolver problemas, aprender nuevas tecnologías y transformar ideas en soluciones funcionales, escalables y bien diseñadas.'];
 export const experience = [{
     years: '2024 - 2026',
     company: 'Entelgy',
@@ -15,12 +25,11 @@ export const experience = [{
     years: '2019 - 2019',
     company: 'OQO',
     roles: ['Desarrollo de sitios para inmobiliarias integrando simuladores de cotización y formularios de contacto, optimizando e implementando flujos UX/UI.', 'Desarrollo e implementación de Woocommerce para tiendas.', 'Desarrollo de tótems digitales touch para salas de ventas.', 'Diseño e implementación de sitios desde 0 con herramientas como Adobe XD.', 'Implementación de herramientas para analítica y SEO.']
+},{
+    years: '2017 - 2019',
+    company: 'Andina del Sud',
+    roles: ['SEO excecutive', 'Web developer']
 }];
-export interface HighlightItemBase {
-    id: string;
-    label: string;
-    description ? : string;
-}
 export const technologies: HighlightItemBase[] = [{
         id: 'javascript',
         label: 'Js'
@@ -55,19 +64,6 @@ export const technologies: HighlightItemBase[] = [{
         label: 'CSS'
     },
 ];
-export interface Project {
-    id: string;
-    title: string;
-    image: {
-        src: string;
-        alt: string;
-        width: number;
-        height: number;
-    };
-    platform: string;
-    role: string;
-    url ? : string;
-}
 export const projects: Project[] = [
     {
         id: 'sentua',
