@@ -15,7 +15,8 @@ h1, h2, h3, strong {font-weight:900}
 h2 {font-size:clamp(56px,6.667vw,128px);line-height:.883;letter-spacing:-.025em;margin-bottom:42px}
 .content {margin-left:26.1458%;margin-right:1.667%;max-width:1386px}
 main>section {min-height:1080px;padding-top:105px;padding-bottom:50px;scroll-margin-top:0}
-.muted {background:var(--section)}
+main>section:nth-of-type(odd) {background:#fff}
+main>section:nth-of-type(even) {background:var(--section)}
 .hero {padding-top:169px;height:1076px;min-height:1076px}
 .hero-content {display:flex;align-items:center;gap:22px}
 .portrait {width:275px;height:780px;overflow:hidden;flex-shrink:0;margin-left:18px;position:relative}
@@ -105,17 +106,13 @@ h1 {font-size:clamp(32px,8vw,48px)}
 
 }
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 main > section {
-  height: 100dvh;
-  min-height: 0;
-  max-height: 100dvh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  height: auto;
+  min-height: 100dvh;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
-  scroll-behavior: smooth;
+  scroll-snap-stop: normal;
   padding-top: clamp(64px, 10dvh, 105px);
   padding-bottom: clamp(24px, 5dvh, 50px);
 }

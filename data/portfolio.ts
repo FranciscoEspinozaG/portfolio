@@ -122,6 +122,23 @@ export const projects: Project[] = [
         role: 'Frontend developer'
     }
 ];
+export const personalProjects: Project[] = [
+    {
+        id: 'ubuntu-home-server',
+        title: 'Servidor Ubuntu en casa',
+        platform: 'Ubuntu Server',
+        role: 'Arquitecto',
+        description: 'Configuré un servidor en casa reutilizando un computador antiguo e instalando Ubuntu Server sin interfaz gráfica. Lo administro exclusivamente mediante SSH desde mi computador personal, a través de la red local. Gracias a Cloudflare Tunnel, publico mis proyectos en mi dominio probae.cl y gestiono sus subdominios desde Cloudflare. Cada proyecto se ejecuta en su propio entorno con Docker, lo que me permite utilizar distintas tecnologías y configuraciones en un mismo servidor.'
+    },
+    {
+        id: 'plataforma-evaluaciones',
+        title: 'Plataforma de evaluaciones',
+        platform: 'Angular / Spring Boot',
+        role: 'Desarrollador',
+        description: 'Desarrollé y desplegué en este servidor una plataforma para ayudar a mi esposa a crear evaluaciones. La plataforma genera un informe por candidato con respuestas correctas e incorrectas y porcentajes de acierto y error por sección o área. Como producto mínimo viable (MVP), cuenta con una única cuenta de administrador definida en el código y enlaces únicos para cada evaluación. A futuro, planeo incorporar un agente de inteligencia artificial que analice los resultados siguiendo las instrucciones de la evaluadora y genere informes más completos.'
+    }
+];
+
 export const stats: HighlightItemBase[] = [
     {
         id: 'experience-years',
@@ -148,12 +165,16 @@ export const sections = [{
         label: 'Tecnologías y habilidades'
     },
     {
+        id: 'experiencia',
+        label: 'Experiencia profesional'
+    },
+    {
         id: 'proyectos',
         label: 'Proyectos destacados'
     },
     {
-        id: 'experiencia',
-        label: 'Experiencia profesional'
+        id: 'proyectos-personales',
+        label: 'Proyectos personales'
     },
     {
         id: 'contacto',

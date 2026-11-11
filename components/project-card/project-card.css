@@ -13,6 +13,9 @@
 }
 
 
+.project.project--without-image {padding:0;margin:40px 0 0}
+.project--without-image figcaption {position:relative;inset:auto;width:100%;box-sizing:border-box;translate:none;line-height:1.5}
+
 /* Swiper controls transform; mobile centering uses independent translate. */
 @media (prefers-reduced-motion: reduce) {.project .parallax-caption { transform: none !important; transition: none !important; }
 }

@@ -1,7 +1,7 @@
 export interface Project {
     id: string;
     title: string;
-    image: {
+    image?: {
         src: string;
         alt: string;
         width: number;
@@ -10,4 +10,5 @@ export interface Project {
     platform: string;
     role: string;
     url?: string;
+    description?: string;
 }

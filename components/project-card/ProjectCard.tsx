@@ -10,8 +10,10 @@ export default function ProjectCard({ project }: {
     project: Project;
 }) {
   const { t } = useLanguage();
-    return (<figure className="project" data-project={project.id}>
-      <img className="project-image" src={assetPath(project.image.src)} alt={t(project.image.alt)} width={project.image.width} height={project.image.height}/>
+    return (<figure className={`project${project.image ? '' : ' project--without-image'}`} data-project={project.id}>
+      {project.image && (
+        <img className="project-image" src={assetPath(project.image.src)} alt={t(project.image.alt)} width={project.image.width} height={project.image.height}/>
+      )}
       <figcaption className="glass parallax-caption" data-swiper-parallax-x="60%" data-swiper-parallax-duration="650">
         <h3>{project.url ? <a href={project.url} target="_blank" rel="noopener noreferrer">{project.title}</a> : project.title}</h3>
         <p>{t("Plataforma:")}<br />
@@ -20,6 +22,7 @@ export default function ProjectCard({ project }: {
         <p>{t("Rol:")}<br />
     <b>{t(project.role)}</b>
     </p>
+        {project.description && <p>{t(project.description)}</p>}
       </figcaption>
     </figure>);
 }

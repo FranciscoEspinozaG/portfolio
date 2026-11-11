@@ -11,8 +11,9 @@ import type { Swiper as SwiperInstance } from 'swiper';
 import type { Project } from '../../interfaces/Project';
 import ProjectCard from '../project-card/ProjectCard';
 import 'swiper/css';
-export default function ProjectsCarousel({ projects }: {
+export default function ProjectsCarousel({ projects, label = 'Proyectos destacados' }: {
     projects: Project[];
+    label?: string;
 }) {
   const { t } = useLanguage();
     const id = useId();
@@ -23,7 +24,7 @@ export default function ProjectsCarousel({ projects }: {
     };
     if (!projects.length)
         return <p>{t("Próximamente nuevos proyectos.")}</p>;
-    return (<div className="projects-carousel" role="region" aria-label={t("Proyectos destacados")} aria-roledescription={t("carrusel")}>
+    return (<div className="projects-carousel" role="region" aria-label={t(label)} aria-roledescription={t("carrusel")}>
       <Swiper id={id} modules={[A11y, Keyboard, Parallax]} parallax watchSlidesProgress speed={650} slidesPerView={1} spaceBetween={24} keyboard={{ enabled: true, onlyInViewport: true }} watchOverflow a11y={{ slideLabelMessage: t('Proyecto {{index}} de {{slidesLength}}') }} onSwiper={instance => { swiper.current = instance; update(instance); }} onSlideChange={update} onUpdate={update}>
         {projects.map(project => (<SwiperSlide key={project.id}>
             <ProjectCard project={project}/>

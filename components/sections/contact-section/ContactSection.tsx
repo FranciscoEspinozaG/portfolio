@@ -4,7 +4,7 @@ import { useState } from 'react';
 export default function ContactSection() {
   const { t } = useLanguage();
     const [notice, setNotice] = useState('');
-    return <section tabIndex={0} aria-label={t("Contacto")} id="contacto" className="muted contact">
+    return <section tabIndex={0} aria-label={t("Contacto")} id="contacto" className="contact">
     <div className="content">
     <h2>{t("Contacto")}</h2>
     <p>{t("¡Hablemos!")}</p>

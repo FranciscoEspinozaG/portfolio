@@ -4,7 +4,7 @@ import { about, stats } from '../../../data/portfolio';
 import HighlightItem from '../../highlight-item/HighlightItem';
 export default function AboutSection() {
   const { t } = useLanguage();
-    return <section tabIndex={0} aria-label={t("Acerca de mí")} id="acerca" className="muted about">
+    return <section tabIndex={0} aria-label={t("Acerca de mí")} id="acerca" className="about">
         <div className="content">
             <h2>{t("Acerca de mí")}</h2>
             <div className="stats">
